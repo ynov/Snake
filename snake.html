@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Snake</title>
+<style type="text/css">
+body {
+  background-color: #CDF76F;
+}
+td {
+  height: 20px;
+  width: 20px;
+  margin: 0;
+  padding: 0;
+}
+table {
+  -moz-border-radius: 0.75em;
+  border-radius: 0.75em;
+  background-color: #A5EF00;
+  border: 4px solid #0D8800;
+  padding: 5px;
+}
+.makanan {
+  background-color: #329D27;
+  border: 1px solid #329D27;
+}
+#mainBox {
+  width: 400px;
+  margin: 60px auto 0 auto;
+}
+#bawah {
+  padding: 5px 12px 5px 12px;
+  font-family: "DejaVu Sans", Colibri, "Trebuchet MS", Verdana, Sans-serif;
+}
+#foot {
+  text-align: center;
+  font-size: 10px;
+}
+</style>
+    <script type="text/javascript" src="./jquery.js"></script>
+  </head>
+  <body>
+    <div id="mainBox">
+     <div>
+
+<table cellpadding="0" cellspacing="0" class="gtable">
+<tr id="row-0"><td id="col-0-0">&nbsp;</td><td id="col-0-1">&nbsp;</td><td id="col-0-2">&nbsp;</td><td id="col-0-3">&nbsp;</td><td id="col-0-4">&nbsp;</td><td id="col-0-5">&nbsp;</td><td id="col-0-6">&nbsp;</td><td id="col-0-7">&nbsp;</td><td id="col-0-8">&nbsp;</td><td id="col-0-9">&nbsp;</td><td id="col-0-10">&nbsp;</td><td id="col-0-11">&nbsp;</td><td id="col-0-12">&nbsp;</td><td id="col-0-13">&nbsp;</td><td id="col-0-14">&nbsp;</td><td id="col-0-15">&nbsp;</td><td id="col-0-16">&nbsp;</td><td id="col-0-17">&nbsp;</td></tr>
+<tr id="row-1"><td id="col-1-0">&nbsp;</td><td id="col-1-1">&nbsp;</td><td id="col-1-2">&nbsp;</td><td id="col-1-3">&nbsp;</td><td id="col-1-4">&nbsp;</td><td id="col-1-5">&nbsp;</td><td id="col-1-6">&nbsp;</td><td id="col-1-7">&nbsp;</td><td id="col-1-8">&nbsp;</td><td id="col-1-9">&nbsp;</td><td id="col-1-10">&nbsp;</td><td id="col-1-11">&nbsp;</td><td id="col-1-12">&nbsp;</td><td id="col-1-13">&nbsp;</td><td id="col-1-14">&nbsp;</td><td id="col-1-15">&nbsp;</td><td id="col-1-16">&nbsp;</td><td id="col-1-17">&nbsp;</td></tr>
+<tr id="row-2"><td id="col-2-0">&nbsp;</td><td id="col-2-1">&nbsp;</td><td id="col-2-2">&nbsp;</td><td id="col-2-3">&nbsp;</td><td id="col-2-4">&nbsp;</td><td id="col-2-5">&nbsp;</td><td id="col-2-6">&nbsp;</td><td id="col-2-7">&nbsp;</td><td id="col-2-8">&nbsp;</td><td id="col-2-9">&nbsp;</td><td id="col-2-10">&nbsp;</td><td id="col-2-11">&nbsp;</td><td id="col-2-12">&nbsp;</td><td id="col-2-13">&nbsp;</td><td id="col-2-14">&nbsp;</td><td id="col-2-15">&nbsp;</td><td id="col-2-16">&nbsp;</td><td id="col-2-17">&nbsp;</td></tr>
+<tr id="row-3"><td id="col-3-0">&nbsp;</td><td id="col-3-1">&nbsp;</td><td id="col-3-2">&nbsp;</td><td id="col-3-3">&nbsp;</td><td id="col-3-4">&nbsp;</td><td id="col-3-5">&nbsp;</td><td id="col-3-6">&nbsp;</td><td id="col-3-7">&nbsp;</td><td id="col-3-8">&nbsp;</td><td id="col-3-9">&nbsp;</td><td id="col-3-10">&nbsp;</td><td id="col-3-11">&nbsp;</td><td id="col-3-12">&nbsp;</td><td id="col-3-13">&nbsp;</td><td id="col-3-14">&nbsp;</td><td id="col-3-15">&nbsp;</td><td id="col-3-16">&nbsp;</td><td id="col-3-17">&nbsp;</td></tr>
+<tr id="row-4"><td id="col-4-0">&nbsp;</td><td id="col-4-1">&nbsp;</td><td id="col-4-2">&nbsp;</td><td id="col-4-3">&nbsp;</td><td id="col-4-4">&nbsp;</td><td id="col-4-5">&nbsp;</td><td id="col-4-6">&nbsp;</td><td id="col-4-7">&nbsp;</td><td id="col-4-8">&nbsp;</td><td id="col-4-9">&nbsp;</td><td id="col-4-10">&nbsp;</td><td id="col-4-11">&nbsp;</td><td id="col-4-12">&nbsp;</td><td id="col-4-13">&nbsp;</td><td id="col-4-14">&nbsp;</td><td id="col-4-15">&nbsp;</td><td id="col-4-16">&nbsp;</td><td id="col-4-17">&nbsp;</td></tr>
+<tr id="row-5"><td id="col-5-0">&nbsp;</td><td id="col-5-1">&nbsp;</td><td id="col-5-2">&nbsp;</td><td id="col-5-3">&nbsp;</td><td id="col-5-4">&nbsp;</td><td id="col-5-5">&nbsp;</td><td id="col-5-6">&nbsp;</td><td id="col-5-7">&nbsp;</td><td id="col-5-8">&nbsp;</td><td id="col-5-9">&nbsp;</td><td id="col-5-10">&nbsp;</td><td id="col-5-11">&nbsp;</td><td id="col-5-12">&nbsp;</td><td id="col-5-13">&nbsp;</td><td id="col-5-14">&nbsp;</td><td id="col-5-15">&nbsp;</td><td id="col-5-16">&nbsp;</td><td id="col-5-17">&nbsp;</td></tr>
+<tr id="row-6"><td id="col-6-0">&nbsp;</td><td id="col-6-1">&nbsp;</td><td id="col-6-2">&nbsp;</td><td id="col-6-3">&nbsp;</td><td id="col-6-4">&nbsp;</td><td id="col-6-5">&nbsp;</td><td id="col-6-6">&nbsp;</td><td id="col-6-7">&nbsp;</td><td id="col-6-8">&nbsp;</td><td id="col-6-9">&nbsp;</td><td id="col-6-10">&nbsp;</td><td id="col-6-11">&nbsp;</td><td id="col-6-12">&nbsp;</td><td id="col-6-13">&nbsp;</td><td id="col-6-14">&nbsp;</td><td id="col-6-15">&nbsp;</td><td id="col-6-16">&nbsp;</td><td id="col-6-17">&nbsp;</td></tr>
+<tr id="row-7"><td id="col-7-0">&nbsp;</td><td id="col-7-1">&nbsp;</td><td id="col-7-2">&nbsp;</td><td id="col-7-3">&nbsp;</td><td id="col-7-4">&nbsp;</td><td id="col-7-5">&nbsp;</td><td id="col-7-6">&nbsp;</td><td id="col-7-7">&nbsp;</td><td id="col-7-8">&nbsp;</td><td id="col-7-9">&nbsp;</td><td id="col-7-10">&nbsp;</td><td id="col-7-11">&nbsp;</td><td id="col-7-12">&nbsp;</td><td id="col-7-13">&nbsp;</td><td id="col-7-14">&nbsp;</td><td id="col-7-15">&nbsp;</td><td id="col-7-16">&nbsp;</td><td id="col-7-17">&nbsp;</td></tr>
+<tr id="row-8"><td id="col-8-0">&nbsp;</td><td id="col-8-1">&nbsp;</td><td id="col-8-2">&nbsp;</td><td id="col-8-3">&nbsp;</td><td id="col-8-4">&nbsp;</td><td id="col-8-5">&nbsp;</td><td id="col-8-6">&nbsp;</td><td id="col-8-7">&nbsp;</td><td id="col-8-8">&nbsp;</td><td id="col-8-9">&nbsp;</td><td id="col-8-10">&nbsp;</td><td id="col-8-11">&nbsp;</td><td id="col-8-12">&nbsp;</td><td id="col-8-13">&nbsp;</td><td id="col-8-14">&nbsp;</td><td id="col-8-15">&nbsp;</td><td id="col-8-16">&nbsp;</td><td id="col-8-17">&nbsp;</td></tr>
+<tr id="row-9"><td id="col-9-0">&nbsp;</td><td id="col-9-1">&nbsp;</td><td id="col-9-2">&nbsp;</td><td id="col-9-3">&nbsp;</td><td id="col-9-4">&nbsp;</td><td id="col-9-5">&nbsp;</td><td id="col-9-6">&nbsp;</td><td id="col-9-7">&nbsp;</td><td id="col-9-8">&nbsp;</td><td id="col-9-9">&nbsp;</td><td id="col-9-10">&nbsp;</td><td id="col-9-11">&nbsp;</td><td id="col-9-12">&nbsp;</td><td id="col-9-13">&nbsp;</td><td id="col-9-14">&nbsp;</td><td id="col-9-15">&nbsp;</td><td id="col-9-16">&nbsp;</td><td id="col-9-17">&nbsp;</td></tr>
+<tr id="row-10"><td id="col-10-0">&nbsp;</td><td id="col-10-1">&nbsp;</td><td id="col-10-2">&nbsp;</td><td id="col-10-3">&nbsp;</td><td id="col-10-4">&nbsp;</td><td id="col-10-5">&nbsp;</td><td id="col-10-6">&nbsp;</td><td id="col-10-7">&nbsp;</td><td id="col-10-8">&nbsp;</td><td id="col-10-9">&nbsp;</td><td id="col-10-10">&nbsp;</td><td id="col-10-11">&nbsp;</td><td id="col-10-12">&nbsp;</td><td id="col-10-13">&nbsp;</td><td id="col-10-14">&nbsp;</td><td id="col-10-15">&nbsp;</td><td id="col-10-16">&nbsp;</td><td id="col-10-17">&nbsp;</td></tr>
+<tr id="row-11"><td id="col-11-0">&nbsp;</td><td id="col-11-1">&nbsp;</td><td id="col-11-2">&nbsp;</td><td id="col-11-3">&nbsp;</td><td id="col-11-4">&nbsp;</td><td id="col-11-5">&nbsp;</td><td id="col-11-6">&nbsp;</td><td id="col-11-7">&nbsp;</td><td id="col-11-8">&nbsp;</td><td id="col-11-9">&nbsp;</td><td id="col-11-10">&nbsp;</td><td id="col-11-11">&nbsp;</td><td id="col-11-12">&nbsp;</td><td id="col-11-13">&nbsp;</td><td id="col-11-14">&nbsp;</td><td id="col-11-15">&nbsp;</td><td id="col-11-16">&nbsp;</td><td id="col-11-17">&nbsp;</td></tr>
+<tr id="row-12"><td id="col-12-0">&nbsp;</td><td id="col-12-1">&nbsp;</td><td id="col-12-2">&nbsp;</td><td id="col-12-3">&nbsp;</td><td id="col-12-4">&nbsp;</td><td id="col-12-5">&nbsp;</td><td id="col-12-6">&nbsp;</td><td id="col-12-7">&nbsp;</td><td id="col-12-8">&nbsp;</td><td id="col-12-9">&nbsp;</td><td id="col-12-10">&nbsp;</td><td id="col-12-11">&nbsp;</td><td id="col-12-12">&nbsp;</td><td id="col-12-13">&nbsp;</td><td id="col-12-14">&nbsp;</td><td id="col-12-15">&nbsp;</td><td id="col-12-16">&nbsp;</td><td id="col-12-17">&nbsp;</td></tr>
+
+<tr id="row-13"><td id="col-13-0">&nbsp;</td><td id="col-13-1">&nbsp;</td><td id="col-13-2">&nbsp;</td><td id="col-13-3">&nbsp;</td><td id="col-13-4">&nbsp;</td><td id="col-13-5">&nbsp;</td><td id="col-13-6">&nbsp;</td><td id="col-13-7">&nbsp;</td><td id="col-13-8">&nbsp;</td><td id="col-13-9">&nbsp;</td><td id="col-13-10">&nbsp;</td><td id="col-13-11">&nbsp;</td><td id="col-13-12">&nbsp;</td><td id="col-13-13">&nbsp;</td><td id="col-13-14">&nbsp;</td><td id="col-13-15">&nbsp;</td><td id="col-13-16">&nbsp;</td><td id="col-13-17">&nbsp;</td></tr>
+<tr id="row-14"><td id="col-14-0">&nbsp;</td><td id="col-14-1">&nbsp;</td><td id="col-14-2">&nbsp;</td><td id="col-14-3">&nbsp;</td><td id="col-14-4">&nbsp;</td><td id="col-14-5">&nbsp;</td><td id="col-14-6">&nbsp;</td><td id="col-14-7">&nbsp;</td><td id="col-14-8">&nbsp;</td><td id="col-14-9">&nbsp;</td><td id="col-14-10">&nbsp;</td><td id="col-14-11">&nbsp;</td><td id="col-14-12">&nbsp;</td><td id="col-14-13">&nbsp;</td><td id="col-14-14">&nbsp;</td><td id="col-14-15">&nbsp;</td><td id="col-14-16">&nbsp;</td><td id="col-14-17">&nbsp;</td></tr>
+<tr id="row-15"><td id="col-15-0">&nbsp;</td><td id="col-15-1">&nbsp;</td><td id="col-15-2">&nbsp;</td><td id="col-15-3">&nbsp;</td><td id="col-15-4">&nbsp;</td><td id="col-15-5">&nbsp;</td><td id="col-15-6">&nbsp;</td><td id="col-15-7">&nbsp;</td><td id="col-15-8">&nbsp;</td><td id="col-15-9">&nbsp;</td><td id="col-15-10">&nbsp;</td><td id="col-15-11">&nbsp;</td><td id="col-15-12">&nbsp;</td><td id="col-15-13">&nbsp;</td><td id="col-15-14">&nbsp;</td><td id="col-15-15">&nbsp;</td><td id="col-15-16">&nbsp;</td><td id="col-15-17">&nbsp;</td></tr>
+<tr id="row-16"><td id="col-16-0">&nbsp;</td><td id="col-16-1">&nbsp;</td><td id="col-16-2">&nbsp;</td><td id="col-16-3">&nbsp;</td><td id="col-16-4">&nbsp;</td><td id="col-16-5">&nbsp;</td><td id="col-16-6">&nbsp;</td><td id="col-16-7">&nbsp;</td><td id="col-16-8">&nbsp;</td><td id="col-16-9">&nbsp;</td><td id="col-16-10">&nbsp;</td><td id="col-16-11">&nbsp;</td><td id="col-16-12">&nbsp;</td><td id="col-16-13">&nbsp;</td><td id="col-16-14">&nbsp;</td><td id="col-16-15">&nbsp;</td><td id="col-16-16">&nbsp;</td><td id="col-16-17">&nbsp;</td></tr>
+<tr id="row-17"><td id="col-17-0">&nbsp;</td><td id="col-17-1">&nbsp;</td><td id="col-17-2">&nbsp;</td><td id="col-17-3">&nbsp;</td><td id="col-17-4">&nbsp;</td><td id="col-17-5">&nbsp;</td><td id="col-17-6">&nbsp;</td><td id="col-17-7">&nbsp;</td><td id="col-17-8">&nbsp;</td><td id="col-17-9">&nbsp;</td><td id="col-17-10">&nbsp;</td><td id="col-17-11">&nbsp;</td><td id="col-17-12">&nbsp;</td><td id="col-17-13">&nbsp;</td><td id="col-17-14">&nbsp;</td><td id="col-17-15">&nbsp;</td><td id="col-17-16">&nbsp;</td><td id="col-17-17">&nbsp;</td></tr>
+</table>
+
+      </div>
+
+      <div id="bawah">
+        Score: <span id="score"></span> |
+        <span><a href="#" id="start">Start</a></span>
+        <div id="gameover"></div>
+        <div id="foot">W: Atas; A: Kiri; S: Bawah; D: Kanan; X: 2.5x Speed / Normal Speed<br/>
+          Copyright &copy; 2010 Inov</div>
+      </div>
+    </div>
+
+<script type="text/javascript">
+//<!--
+var segmen = 5;
+var i
+var j = 'kanan';
+var gameover = 1;
+var tfunc;
+var score = 0;
+var xMakan = 0;
+var yMakan = 0;
+var x = new Array();
+var y = new Array();
+var v = 250;
+x[0] = 0;
+y[0] = 0;
+
+function tebarMakanan () {
+  xMakan = Math.floor(Math.random()*15);
+  yMakan = Math.floor(Math.random()*15);
+
+  /* tebar makanan pada tempat yang masih kosong */
+  for (i = 0; i <= segmen; i++) {
+    if ( (xMakan == x[i]) && (yMakan == y[i]) ) {
+      xMakan = Math.floor(Math.random()*15);
+      yMakan = Math.floor(Math.random()*15);
+      i = 0;
+    }
+  }
+
+  $('#col-'+yMakan+'-'+xMakan).addClass('makanan').css('background-color', '#329D27');
+}
+
+function jalan(arah) {
+
+  for (i = segmen; i > 0; i--) {
+    x[i] = x[i-1];
+    y[i] = y[i-1];
+  }
+
+  switch (arah) {
+    case 'kanan' :  x[0] += 1;
+      break;
+    case 'kiri'  :  x[0] -= 1;
+      break;
+    case 'atas'  :  y[0] -= 1;
+      break;
+    case 'bawah' :  y[0] += 1;
+      break;
+  }
+
+  /* kepala segmen kena makanan */
+  if ((x[0] == xMakan) && (y[0] == yMakan)) {
+    $('.makanan').removeClass('makanan');
+    tebarMakanan();
+    segmen++; // segmen bertambah 1
+    score += 100;
+    $("#score").html (''+score);
+  }
+
+  /* kepala segmen kena segmen lain */
+  for (i = 1; i <= segmen; i++) {
+    if ( (x[0] == x[i]) && (y[0] == y[i]) ) {
+      gameover = 1;
+    }
+  }
+
+  $('#col-'+y[segmen]+'-'+x[segmen]).removeClass('col-head').css('background-color', '#A5EF00');
+  for (i = segmen-1; i > 0; i--) {
+    $('#col-'+y[i]+'-'+x[i]).removeClass('col-head').css('background-color', '#8AB32D');
+  }
+  $('#col-'+y[0]+'-'+x[0]).addClass('col-head').css('background-color', '#6B9B00');
+
+  /* kepala segmen keluar dari batas */
+  if ( (x[0] < 0) || (x[0] > 17) || (y[0] < 0) || (y[0] > 17) ) {
+    gameover = 1;
+  }
+
+  if (!gameover) {
+    tfunc = setTimeout("jalan('"+arah+"')",v);
+  } else {
+    $("#gameover").html ('Game Over!');
+    clearTimeout(tfunc);
+  }
+}
+
+$(document).keypress(function(event) {
+  if ( !gameover ) {
+    switch (event.which) {
+    case 119: // W & w
+    case 87:
+      if ( (j!='atas') && (j!='bawah') ) {
+        clearTimeout(tfunc);
+        jalan('atas');
+      }
+      j = 'atas';
+      break;
+    case 97: // A & a
+    case 65:
+      if ( (j!='kiri') && (j!='kanan') ) {
+        clearTimeout(tfunc);
+        jalan('kiri');
+      }
+      j = 'kanan';
+      break;
+    case 115: // S & s
+    case 83:
+      if ( (j!='bawah') && (j!='atas') ) {
+        clearTimeout(tfunc);
+        jalan('bawah');
+      }
+      j = 'bawah';
+      break;
+    case 100: // D & d
+    case 63:
+      if ( (j!='kanan') && (j!='kiri') ) {
+        clearTimeout(tfunc);
+        jalan('kanan');
+      }
+      j = 'kanan';
+      break;
+    case 120:
+    case 88:
+      (v == 100) ? v = 250 : v = 100;
+      break;
+    case 109:
+      clearTimeout(tfunc);
+      break;
+    }
+  }
+});
+
+$('#start').click (function () {
+  if ($(this).html() == 'Start') {
+    gameover = 0;
+    tebarMakanan();
+    jalan('kanan');
+    $('#start').html('Refresh');
+  } else {
+    window.open ('snake.php','_self');
+  }
+});
+
+$("#score").html(''+score);
+//-->
+</script>
+
+  </body>
+</html>
