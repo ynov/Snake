@@ -1,1 +1,1 @@
-Just an inefficiently coded javascript snake game.
+Javascript (requires jQuery) snake game. Inefficiently coded.
